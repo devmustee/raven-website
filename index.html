@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven Wallet — The Multi-Chain Command Center</title>
+    <meta name="description" content="Raven Wallet is a TON-based multi-chain wallet that lets users store, manage, trade, and bridge assets across multiple blockchains from a single interface.">
+    <meta name="keywords" content="crypto wallet, multi-chain wallet, DeFi, TON, Solana, SUI, EVM, Raven Wallet, RVN points">
+    <meta property="og:title" content="Raven Wallet — The Multi-Chain Command Center">
+    <meta property="og:description" content="A TON-based multi-chain wallet. Store, manage, trade, and bridge assets across multiple blockchains from a single interface.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="../Raven-Wallet/assets/images/raven-app-icon.png">
+    <link rel="apple-touch-icon" href="../Raven-Wallet/assets/images/raven-app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="../Raven-Wallet/assets/images/Ravenlogo.png" alt="Raven Wallet" class="nav-logo-img">
+                <span>Raven Wallet</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#chains">Chains</a>
+                <a href="#security">Security</a>
+                <a href="#rewards">Rewards</a>
+                <a href="#community">Community</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#download" class="btn btn-primary" id="navCta">Download App</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Now Live — Private Beta</span>
+                </div>
+                <h1 class="hero-title">
+                    The <span class="gradient-text">TON-Based</span><br>
+                    Multi-Chain Wallet
+                </h1>
+                <p class="hero-subtitle">
+                    Store, manage, trade, and bridge assets across multiple 
+                    blockchains from a single interface. Designed for both casual 
+                    users and advanced traders — combining security, flexibility, 
+                    and ease of use.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="store-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="store-badge-img">
+                    </a>
+                    <a href="#" class="store-badge store-badge-disabled">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge-img">
+                        <span class="coming-soon-label">Coming Soon</span>
+                    </a>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-target="15">0</span><span class="hero-stat-suffix">+</span>
+                        <span class="hero-stat-label">Chains Supported</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-target="62">0</span><span class="hero-stat-suffix">+</span>
+                        <span class="hero-stat-label">Listed Tokens</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-target="100">0</span><span class="hero-stat-suffix">%</span>
+                        <span class="hero-stat-label">Non-Custodial</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen screenshot-screen">
+                        <img src="wallet-ui.png" alt="Raven Wallet App" class="phone-screenshot">
+                    </div>
+                </div>
+                <div class="floating-chain chain-1">
+                    <img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" alt="TON" class="chain-orb-img">
+                </div>
+                <div class="floating-chain chain-2">
+                    <img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" alt="SOL" class="chain-orb-img">
+                </div>
+                <div class="floating-chain chain-3">
+                    <img src="https://assets.coingecko.com/coins/images/26375/small/sui_asset.jpeg" alt="SUI" class="chain-orb-img">
+                </div>
+                <div class="floating-chain chain-4">
+                    <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" class="chain-orb-img">
+                </div>
+                <div class="floating-chain chain-5">
+                    <img src="https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png" alt="BNB" class="chain-orb-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ CHAINS MARQUEE ═══════════════════ -->
+    <section class="chains-marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum" class="marquee-logo"><span>Ethereum</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" alt="Solana" class="marquee-logo"><span>Solana</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" alt="TON" class="marquee-logo"><span>TON</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/26375/small/sui_asset.jpeg" alt="SUI" class="marquee-logo"><span>SUI</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://avatars.githubusercontent.com/u/108554348?s=200&v=4" alt="Base" class="marquee-logo"><span>Base</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg" alt="Arbitrum" class="marquee-logo"><span>Arbitrum</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/4713/small/polygon.png" alt="Polygon" class="marquee-logo"><span>Polygon</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png" alt="BNB Chain" class="marquee-logo"><span>BNB Chain</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/25244/small/Optimism.png" alt="Optimism" class="marquee-logo"><span>Optimism</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png" alt="Avalanche" class="marquee-logo"><span>Avalanche</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="Bitcoin" class="marquee-logo"><span>Bitcoin</span></div>
+                <span class="chain-dot"></span>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum" class="marquee-logo"><span>Ethereum</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" alt="Solana" class="marquee-logo"><span>Solana</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" alt="TON" class="marquee-logo"><span>TON</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/26375/small/sui_asset.jpeg" alt="SUI" class="marquee-logo"><span>SUI</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://avatars.githubusercontent.com/u/108554348?s=200&v=4" alt="Base" class="marquee-logo"><span>Base</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg" alt="Arbitrum" class="marquee-logo"><span>Arbitrum</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/4713/small/polygon.png" alt="Polygon" class="marquee-logo"><span>Polygon</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png" alt="BNB Chain" class="marquee-logo"><span>BNB Chain</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/25244/small/Optimism.png" alt="Optimism" class="marquee-logo"><span>Optimism</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png" alt="Avalanche" class="marquee-logo"><span>Avalanche</span></div>
+                <span class="chain-dot"></span>
+                <div class="marquee-item"><img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="Bitcoin" class="marquee-logo"><span>Bitcoin</span></div>
+                <span class="chain-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ FEATURES BENTO ═══════════════════ -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-chip">ULTIMATE FEATURES</span>
+                <h2 class="section-title">Everything you need.<br><span class="gradient-text">Nothing you don't.</span></h2>
+                <p class="section-subtitle">Built from the ground up for the multi-chain era. Every feature is crafted for speed, security, and elegance.</p>
+            </div>
+            <div class="bento-grid">
+                <!-- Card 1: Command Center (wide) -->
+                <div class="bento-card bento-wide" id="featureWallet">
+                    <div class="bento-content">
+                        <span class="bento-chip">THE CORE</span>
+                        <h3 class="bento-title">The Modern<br>Command Center</h3>
+                        <p class="bento-desc">Track and manage all your assets across 15+ blockchains in one unified, beautiful dashboard. Real-time balances, instant actions, zero friction.</p>
+                        <div class="bento-tags">
+                            <span>Multi-Chain</span>
+                            <span>Real-time</span>
+                            <span>One-Click Actions</span>
+                        </div>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="bento-mock wallet-mock">
+                            <div class="bm-header">
+                                <div class="bm-balance">$12,847.63</div>
+                                <div class="bm-change">+3.24%</div>
+                            </div>
+                            <div class="bm-chart">
+                                <svg viewBox="0 0 300 80" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F5FF" stop-opacity="0.3"/>
+                                            <stop offset="100%" stop-color="#00F5FF" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M0,60 Q30,55 60,50 T120,35 T180,25 T240,30 T300,15" fill="none" stroke="#00F5FF" stroke-width="2"/>
+                                    <path d="M0,60 Q30,55 60,50 T120,35 T180,25 T240,30 T300,15 L300,80 L0,80 Z" fill="url(#chartGrad)"/>
+                                </svg>
+                            </div>
+                            <div class="bm-assets">
+                                <div class="bm-asset"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" class="bm-coin-logo" alt="ETH"><span>ETH</span><span>$4,281</span></div>
+                                <div class="bm-asset"><img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" class="bm-coin-logo" alt="SOL"><span>SOL</span><span>$3,120</span></div>
+                                <div class="bm-asset"><img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" class="bm-coin-logo" alt="TON"><span>TON</span><span>$2,480</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Token Discovery -->
+                <div class="bento-card" id="featureMarket">
+                    <div class="bento-content">
+                        <span class="bento-chip">MARKET</span>
+                        <h3 class="bento-title">Smart Token<br>Discovery</h3>
+                        <p class="bento-desc">Pro-grade terminal for identifying trending assets. Live tracking of top gainers, volume, and narrative-driven gems.</p>
+                    </div>
+                    <div class="bento-visual-sm">
+                        <div class="token-list">
+                            <div class="token-item"><img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="Bitcoin" class="token-logo"><div class="token-info"><span>Bitcoin</span><span class="token-gain">+142%</span></div></div>
+                            <div class="token-item"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum" class="token-logo"><div class="token-info"><span>Eth</span><span class="token-gain">+38%</span></div></div>
+                            <div class="token-item"><img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" alt="TON" class="token-logo"><div class="token-info"><span>TON</span><span class="token-gain">+21%</span></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Rewards -->
+                <div class="bento-card" id="featureRewards">
+                    <div class="bento-content">
+                        <span class="bento-chip reward-chip">REWARDS</span>
+                        <h3 class="bento-title">Daily Streak<br>Rewards</h3>
+                        <p class="bento-desc">Check in daily and maintain your streak to earn RVN points. The longer your streak, the bigger your multiplier.</p>
+                    </div>
+                    <div class="bento-visual-sm">
+                        <div class="reward-display">
+                            <div class="streak-flames"><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg></div>
+                            <div class="reward-amount">2,450 <span>RVN</span></div>
+                            <div class="streak-days">
+                                <div class="streak-day done">M</div>
+                                <div class="streak-day done">T</div>
+                                <div class="streak-day done">W</div>
+                                <div class="streak-day done">T</div>
+                                <div class="streak-day done">F</div>
+                                <div class="streak-day today">S</div>
+                                <div class="streak-day">S</div>
+                            </div>
+                            <div class="reward-label">Day 14 — 2.5x Multiplier <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Cross-Chain Swap (wide) -->
+                <div class="bento-card bento-wide bento-reverse" id="featureSwap">
+                    <div class="bento-content">
+                        <span class="bento-chip">SWAP & BRIDGE</span>
+                        <h3 class="bento-title">Cross-Chain<br>Swaps</h3>
+                        <p class="bento-desc">Swap any token across any chain in seconds. Aggregated liquidity from top DEXs ensures you always get the best price with minimal slippage.</p>
+                        <div class="bento-tags">
+                            <span>Multi-DEX</span>
+                            <span>Best Rates</span>
+                            <span>Cross-Chain Bridge</span>
+                        </div>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="swap-mock">
+                            <div class="swap-from">
+                                <div class="swap-label">From</div>
+                                <div class="swap-row">
+                                    <div class="swap-token"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" class="swap-token-logo" alt="ETH"><span>ETH</span></div>
+                                    <div class="swap-amount">1.5</div>
+                                </div>
+                                <div class="swap-chain-tag">Ethereum</div>
+                            </div>
+                            <div class="swap-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                            </div>
+                            <div class="swap-to">
+                                <div class="swap-label">To</div>
+                                <div class="swap-row">
+                                    <div class="swap-token"><img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" class="swap-token-logo" alt="SOL"><span>SOL</span></div>
+                                    <div class="swap-amount">28.4</div>
+                                </div>
+                                <div class="swap-chain-tag">Solana</div>
+                            </div>
+                            <div class="swap-rate">1 ETH ≈ 18.93 SOL <span class="swap-best"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Best rate</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Security (wide) -->
+                <div class="bento-card bento-wide" id="featureSecurity">
+                    <div class="bento-content">
+                        <span class="bento-chip security-chip">SECURITY FIRST</span>
+                        <h3 class="bento-title">Guardian<br>Audit Engine</h3>
+                        <p class="bento-desc">Proactive contract analysis and transaction simulation. Detect honeypots, evaluate risk scores, and verify contracts before every interaction.</p>
+                        <div class="bento-tags">
+                            <span>TX Simulation</span>
+                            <span>Honeypot Detection</span>
+                            <span>Risk Scores</span>
+                        </div>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="security-mock">
+                            <div class="sec-score-ring">
+                                <svg viewBox="0 0 120 120">
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="8"/>
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="#00FFCC" stroke-width="8" stroke-dasharray="228 99" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                                </svg>
+                                <span class="sec-score-value">70</span>
+                            </div>
+                            <div class="sec-checks">
+                                <div class="sec-check pass"><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> No honeypot detected</div>
+                                <div class="sec-check pass"><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Liquidity locked</div>
+                                <div class="sec-check warn"><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span> Limited audit data</div>
+                                <div class="sec-check pass"><span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Owner verified</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ MULTI-CHAIN SECTION ═══════════════════ -->
+    <section class="chains-section" id="chains">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-chip">MULTI-CHAIN</span>
+                <h2 class="section-title">One wallet.<br><span class="gradient-text">Every chain.</span></h2>
+                <p class="section-subtitle">From EVM to non-EVM. Unified management across every major ecosystem.</p>
+            </div>
+            <div class="chain-grid">
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="Ethereum" class="chain-card-logo"><span>Ethereum</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" alt="Solana" class="chain-card-logo"><span>Solana</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" alt="TON" class="chain-card-logo"><span>TON</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/26375/small/sui_asset.jpeg" alt="SUI" class="chain-card-logo"><span>SUI</span></div>
+                <div class="chain-card"><img src="https://avatars.githubusercontent.com/u/108554348?s=200&v=4" alt="Base" class="chain-card-logo"><span>Base</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg" alt="Arbitrum" class="chain-card-logo"><span>Arbitrum</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/4713/small/polygon.png" alt="Polygon" class="chain-card-logo"><span>Polygon</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png" alt="BNB Chain" class="chain-card-logo"><span>BNB Chain</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/25244/small/Optimism.png" alt="Optimism" class="chain-card-logo"><span>Optimism</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png" alt="Avalanche" class="chain-card-logo"><span>Avalanche</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/1094/small/tron-logo.png" alt="Tron" class="chain-card-logo"><span>Tron</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/100/small/Stellar_symbol_black_RGB.png" alt="Stellar" class="chain-card-logo stellar-logo"><span>Stellar</span></div>
+                <div class="chain-card"><img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="Bitcoin" class="chain-card-logo"><span>Bitcoin</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+    <section class="how-it-works" id="security">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-chip">HOW IT WORKS</span>
+                <h2 class="section-title">From zero to crypto<br><span class="gradient-text">in 60 seconds.</span></h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Create Your Wallet</h3>
+                    <p>Generate a secure, non-custodial wallet with a single tap. Your keys, your coins — always.</p>
+                </div>
+                <div class="step-connector"><div class="connector-line"></div></div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Add Your Assets</h3>
+                    <p>Receive or import tokens from any supported chain. Your unified dashboard updates in real-time.</p>
+                </div>
+                <div class="step-connector"><div class="connector-line"></div></div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Swap, Earn & Grow</h3>
+                    <p>Cross-chain swaps, daily RVN streak rewards, and real-time market intelligence. Everything, one app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ STATS BAR ═══════════════════ -->
+    <section class="stats-bar">
+        <div class="section-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" data-target="15">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Blockchains</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="62">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Listed Tokens</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="0">0</div>
+                    <div class="stat-suffix"></div>
+                    <div class="stat-label">Security Incidents</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="100">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">Non-Custodial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ REWARDS SECTION ═══════════════════ -->
+    <section class="rewards-section" id="rewards">
+        <div class="section-container">
+            <div class="rewards-split">
+                <div class="rewards-content">
+                    <span class="section-chip">RVN REWARDS</span>
+                    <h2 class="section-title">Streak rewards that<br><span class="gradient-text">actually pay.</span></h2>
+                    <p class="section-subtitle">Check in daily to build your streak and earn RVN points. The longer you stay consistent, the more you earn. No complicated tasks — just show up.</p>
+                    <ul class="rewards-list">
+                        <li>
+                            <div class="reward-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FF6B35" stroke="none"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg></div>
+                            <div><strong>Daily Check-ins</strong><br>Open the app and claim your daily RVN points. It takes one tap.</div>
+                        </li>
+                        <li>
+                            <div class="reward-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                            <div><strong>Streak Multipliers</strong><br>Keep your streak alive and watch your daily rewards multiply. Day 7 = 2x. Day 14 = 2.5x. Day 30 = 5x.</div>
+                        </li>
+                        <li>
+                            <div class="reward-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                            <div><strong>Pre-TGE Accumulation</strong><br>Stack RVN points before the Token Generation Event. Early streakers get the biggest advantage.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rewards-visual">
+                    <div class="rvnx-card">
+                        <div class="rvnx-glow"></div>
+                        <div class="rvnx-header">
+                            <span>RVN Points</span>
+                            <span class="rvnx-badge">Pre-TGE</span>
+                        </div>
+                        <div class="rvnx-amount">12,450 <span>RVN</span></div>
+                        <div class="rvnx-streak-card">
+                            <div class="rvnx-streak-header">
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" stroke="none" style="vertical-align:-2px;margin-right:4px"><path d="M12 23c-3.6 0-8-2.4-8-8 0-4.8 4-9.5 5.5-11 .5 3.5 2 5 3.5 6.5C14.5 12 15 14 15 14s1-1.5 1-3.5c2.5 3 3.5 5 3.5 7.5 0 5.6-4.4 8-7.5 8z"/></svg>Current Streak</span>
+                                <span class="rvnx-streak-count">14 Days</span>
+                            </div>
+                            <div class="rvnx-streak-days">
+                                <div class="sd done">M</div>
+                                <div class="sd done">T</div>
+                                <div class="sd done">W</div>
+                                <div class="sd done">T</div>
+                                <div class="sd done">F</div>
+                                <div class="sd done">S</div>
+                                <div class="sd today">S</div>
+                            </div>
+                        </div>
+                        <div class="rvnx-mult-row">
+                            <span>Daily Reward</span>
+                            <span class="rvnx-daily">+125 RVN</span>
+                        </div>
+                        <div class="rvnx-mult-row">
+                            <span>Streak Multiplier</span>
+                            <span class="rvnx-mult">2.5x <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" style="vertical-align:-2px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+                        </div>
+                        <div class="rvnx-mult-row highlight">
+                            <span>Today's Earnings</span>
+                            <span class="rvnx-total">+312 RVN</span>
+                        </div>
+                        <div class="rvnx-progress">
+                            <div class="rvnx-bar"><div class="rvnx-fill"></div></div>
+                            <span>Level 7 — Diamond</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ COMMUNITY ═══════════════════ -->
+    <section class="community" id="community">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-chip">COMMUNITY</span>
+                <h2 class="section-title">Built with the<br><span class="gradient-text">community.</span></h2>
+                <p class="section-subtitle">Join thousands of early adopters already managing their crypto with Raven Wallet.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Finally a wallet that actually supports TON, Solana, AND EVM in one place. The UI is insanely clean."</p>
+                    <div class="testimonial-author">
+                        <img src="viktor-avatar.jpg" alt="Viktor" class="testimonial-avatar-img">
+                        <div><strong>viktor.ton</strong><span>TON Community</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"The security audit feature saved me from a honeypot. I check every token through Raven Wallet now before I ape in."</p>
+                    <div class="testimonial-author">
+                        <img src="devmustee-avatar.jpg" alt="Devmustee" class="testimonial-avatar-img">
+                        <div><strong>Devmustee</strong><span>Lead Developer</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"The daily streak rewards are addictive. Just open the app, tap claim, and stack RVN points. Already on a 30-day streak!"</p>
+                    <div class="testimonial-author">
+                        <img src="jeribond-avatar.jpg" alt="Jeribond" class="testimonial-avatar-img">
+                        <div><strong>Jeribond</strong><span>Early Adopter</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ CTA ═══════════════════ -->
+    <section class="cta" id="download">
+        <div class="cta-bg">
+            <div class="cta-glow"></div>
+        </div>
+        <div class="section-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to take<br>command?</h2>
+                <p class="cta-subtitle">A TON-based multi-chain wallet for storing, managing, trading, and bridging assets. Designed for everyone — from first-time users to advanced traders.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="store-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="store-badge-img store-badge-lg">
+                    </a>
+                    <a href="#" class="store-badge store-badge-disabled">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge-img store-badge-lg">
+                        <span class="coming-soon-label">Coming Soon</span>
+                    </a>
+                </div>
+                <p class="cta-note">100% non-custodial · Your keys, your crypto · Open source</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="../Raven-Wallet/assets/images/Ravenlogo.png" alt="Raven Wallet" class="footer-logo-img">
+                        <span>Raven Wallet</span>
+                    </a>
+                    <p>A TON-based multi-chain wallet. Store, manage, trade, and bridge assets across blockchains — built for everyone.</p>
+                    <div class="footer-socials">
+                        <a href="https://x.com/Raven_wallet" target="_blank" class="social-link" aria-label="Twitter/X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="#" class="social-link" aria-label="Discord"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg></a>
+                        <a href="https://t.me/ravenwalletcommunity" target="_blank" class="social-link" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 1 0 24 12.056A12.014 12.014 0 0 0 11.944 0Zm5.654 8.22-1.64 7.726c-.12.54-.44.67-.89.42l-2.46-1.81-1.19 1.14a.62.62 0 0 1-.49.24l.18-2.5 4.56-4.12c.2-.18-.04-.28-.31-.1l-5.64 3.55-2.43-.76c-.53-.16-.54-.53.11-.78l9.49-3.66c.44-.16.83.11.68.74Z"/></svg></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#chains">Supported Chains</a>
+                    <a href="#security">Security</a>
+                    <a href="#rewards">RVN Rewards</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Brand Kit</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Raven Wallet. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
