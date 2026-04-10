@@ -741,39 +741,39 @@ img {
     bottom: 10px;
     left: 8px;
     right: 8px;
-    height: 58px;
-    background: rgba(10, 10, 10, 0.9);
+    height: 62px;
+    background: rgba(10, 10, 10, 0.92);
     backdrop-filter: blur(25px);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 22px;
+    border-radius: 24px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
-    padding: 0 2px;
+    padding: 0 4px;
     z-index: 30;
 }
 .b-nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
-    color: rgba(255,255,255,0.4);
+    gap: 4px;
+    color: rgba(255,255,255,0.45);
+}
+.b-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
 }
 .b-nav-item.active {
     color: #00F0FF;
-    position: relative;
 }
-.active-dot {
-    width: 4px;
-    height: 4px;
-    background: #00F0FF;
-    border-radius: 50%;
-    margin: 2px 0 1px;
-    box-shadow: 0 0 6px #00F0FF;
-    position: relative;
-}
-.b-icon {
-    font-size: 16px;
+.b-nav-item.active .b-icon-wrap {
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid rgba(0, 240, 255, 0.15);
 }
 .b-nav-item span {
     font-size: 8px;
