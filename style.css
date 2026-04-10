@@ -415,35 +415,55 @@ img {
     animation: fade-in-up 1s ease-out 0.3s both;
 }
 .phone-mockup {
-    width: 300px;
-    height: 620px;
+    width: 310px;
+    height: 675px;
     background: #0B0B0C;
-    border-radius: 44px;
-    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 58px;
+    border: 8px solid #1c1c1e;
     box-shadow:
-        0 0 0 1px rgba(0,0,0,0.5),
-        0 40px 80px -20px rgba(0,0,0,0.8),
-        0 0 60px rgba(0, 245, 255, 0.08);
+        0 0 0 2px #3a3a3c,
+        0 40px 100px -20px rgba(0,0,0,0.9),
+        0 80px 160px -40px rgba(20, 241, 149, 0.15);
     overflow: hidden;
     position: relative;
     z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
 }
-.phone-notch {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 28px;
-    background: #000;
-    border-radius: 0 0 18px 18px;
-    z-index: 10;
+.phone-mockup:hover {
+    transform: scale(1.02) translateY(-10px);
 }
 .phone-screen {
-    width: 100%;
-    height: 100%;
-    padding: 48px 16px 16px;
+    flex: 1;
+    background: #0B0B0C;
+    position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.phone-screen::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.03) 50%, 
+        rgba(255,255,255,0) 100%
+    );
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 20;
+}
+.mock-app-screen {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #0B0B0C;
 }
 .screenshot-screen {
     padding: 0;
@@ -459,161 +479,411 @@ img {
 }
 .mock-app {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 14px;
+    animation: mock-app-load 0.8s ease-out both;
+    position: relative;
+    z-index: 5;
+    background: radial-gradient(ellipse at 50% 0%, rgba(0, 240, 255, 0.12) 0%, transparent 65%);
 }
-.mock-header {
-    text-align: center;
-    padding: 12px 0 20px;
-}
-.mock-greeting {
+
+/* Status Bar */
+.mock-app-top-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px 4px;
     font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 700;
 }
-.mock-balance-label {
-    font-size: 11px;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.mock-island {
+    width: 84px;
+    height: 24px;
+    background: #000;
+    border-radius: 14px;
 }
-.mock-balance {
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: -0.02em;
+.mock-status-icons {
+    display: flex;
+    gap: 4px;
+    align-items: center;
 }
-.mock-balance span {
-    font-size: 20px;
-    color: var(--text-secondary);
+
+/* Top Nav */
+.mock-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
 }
-.mock-change {
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: 6px;
+.mock-profile-btn {
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
 }
-.mock-change.positive {
-    color: var(--success);
+.mock-top-actions {
+    display: flex;
+    gap: 8px;
 }
-.mock-actions {
+.mock-notif-btn, .mock-settings-btn {
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.mock-notif-btn .dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    background: #FF0055;
+    border-radius: 50%;
+    border: 1.5px solid #050505;
+}
+
+/* Pill Status */
+.mock-systems-status {
+    align-self: center;
+    padding: 4px 10px;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 100px;
+    font-size: 7px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.55);
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.06em;
+}
+.status-dot {
+    width: 5px;
+    height: 5px;
+    background: #00f56d;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 245, 109, 0.4);
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 6px rgba(0, 245, 109, 0.6); }
+    50% { transform: scale(1.2); opacity: 0.8; box-shadow: 0 0 12px rgba(0, 245, 109, 0.4); }
+}
+
+/* Backup Card */
+.mock-backup-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 0, 85, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 85, 0.15);
+    border-radius: 14px;
+    margin: 6px 0 14px;
+    box-shadow: 0 8px 32px -4px rgba(255, 0, 85, 0.05);
+}
+.mock-backup-icon {
+    font-size: 16px;
+}
+.mock-backup-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.mock-backup-text strong {
+    font-size: 10px;
+    color: #F8005A;
+    margin-bottom: 1px;
+    font-weight: 800;
+}
+.mock-backup-text span {
+    font-size: 8px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.3;
+    font-weight: 500;
+}
+.mock-backup-arrow {
+    color: #FF0055;
+    font-size: 14px;
+}
+
+/* Balance Card */
+.mock-balance-card {
+    padding: 22px 16px 18px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 240, 255, 0.12);
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+}
+.balance-label {
+    font-size: 8px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 6px;
+}
+.mock-main-balance {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: -0.03em;
+}
+.mock-balance-gain {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px 10px;
+    background: rgba(0, 240, 255, 0.08);
+    color: #00F0FF;
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+/* Action Grid */
+.mock-main-actions {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
-    margin: 16px 0;
+    margin-bottom: 20px;
 }
-.mock-action {
+.m-action {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    font-size: 11px;
-    color: var(--text-secondary);
 }
-.mock-action-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border);
+.m-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
 }
-.mock-assets-header {
+.m-action.receive .m-icon { border: 1px solid #00F0FF; color: #00F0FF; background: rgba(0, 240, 255, 0.03); }
+.m-action.send .m-icon { border: 1px solid #F8005A; color: #F8005A; background: rgba(248, 0, 90, 0.03); }
+.m-action.swap .m-icon { border: 1px solid #00F0FF; color: #00F0FF; background: rgba(0, 240, 255, 0.03); }
+.m-action.more .m-icon { border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; background: rgba(255, 255, 255, 0.03); }
+
+.m-action span {
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+.m-action.receive span { color: #00F0FF; opacity: 0.9; }
+.m-action.send span { color: #F8005A; opacity: 0.9; }
+.m-action.swap span { color: #00F0FF; opacity: 0.9; }
+.m-action.more span { color: rgba(255,255,255,0.6); }
+
+/* Tabs */
+.mock-tabs-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+}
+.mock-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 3px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+}
+.mock-tabs span {
+    padding: 6px 16px;
+    font-size: 10px;
     font-weight: 700;
-    margin: 16px 0 10px;
+    border-radius: 8px;
+    color: rgba(255,255,255,0.4);
 }
-.mock-see-all {
-    font-size: 12px;
-    color: var(--primary);
-    font-weight: 500;
+.mock-tabs span.active {
+    background: #00F0FF;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
 }
-.mock-asset {
+.mock-secondary-actions {
+    display: flex;
+    gap: 6px;
+}
+.s-action {
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Bottom Nav */
+.mock-bottom-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    right: 8px;
+    height: 58px;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    padding: 0 2px;
+    z-index: 30;
+}
+.b-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    color: rgba(255,255,255,0.4);
+}
+.b-nav-item.active {
+    color: #00F0FF;
+    position: relative;
+}
+.active-dot {
+    width: 4px;
+    height: 4px;
+    background: #00F0FF;
+    border-radius: 50%;
+    margin: 2px 0 1px;
+    box-shadow: 0 0 6px #00F0FF;
+    position: relative;
+}
+.b-icon {
+    font-size: 16px;
+}
+.b-nav-item span {
+    font-size: 8px;
+    font-weight: 600;
+}
+
+/* Token List */
+.mock-token-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+    padding-bottom: 70px;
+}
+.mock-token-item {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px;
-    border-radius: var(--radius-md);
     background: rgba(255,255,255,0.02);
-    margin-bottom: 6px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 14px;
+    transition: background 0.2s;
 }
-.mock-asset-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 14px;
-    color: #000;
+img.mock-token-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
-.mock-asset-icon.eth { background: #627EEA; }
-.mock-asset-icon.sol { background: linear-gradient(135deg, #9945FF, #14F195); }
-.mock-asset-icon.ton { background: #0098EA; }
-.mock-asset-icon.sui { background: #4DA2FF; }
-.mock-asset-info {
+.mock-token-info {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    justify-content: space-between;
+    align-items: center;
 }
-.mock-asset-name {
-    font-size: 13px;
-    font-weight: 600;
-}
-.mock-asset-chain {
-    font-size: 11px;
-    color: var(--text-muted);
-}
-.mock-asset-values {
-    text-align: right;
+.mock-token-name {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
-.mock-asset-amount {
-    font-size: 13px;
-    font-weight: 600;
+.mock-token-symbol {
+    font-size: 10px;
+    font-weight: 800;
+    color: #fff;
 }
-.mock-asset-qty {
-    font-size: 11px;
-    color: var(--text-muted);
+.mock-token-fullname {
+    font-size: 7px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+}
+.mock-token-value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+.mock-token-price {
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+.mock-token-change {
+    font-size: 7px;
+    font-weight: 700;
+}
+.mock-token-change.positive {
+    color: #14F195;
 }
 
-/* Floating chain orbs */
+/* Animations */
+@keyframes mock-app-load {
+    from { opacity: 0; filter: blur(10px); }
+    to { opacity: 1; filter: blur(0); }
+}
+
+/* Floating Elements Positioning */
 .floating-chain {
     position: absolute;
-    z-index: 1;
-    animation: float 6s ease-in-out infinite;
-}
-.chain-orb {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: 18px;
-    color: #000;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 10;
+    animation: float-orb 6s ease-in-out infinite;
 }
-.chain-orb.ton { background: rgba(0, 152, 234, 0.9); }
-.chain-orb.sol { background: linear-gradient(135deg, #9945FF, #14F195); }
-.chain-orb.sui { background: rgba(77, 162, 255, 0.9); }
-.chain-orb.eth { background: rgba(98, 126, 234, 0.9); }
-.chain-orb.bnb { background: rgba(243, 186, 47, 0.9); color: #000; }
 
-.chain-1 { top: 15%; left: -10%; animation-delay: 0s; }
-.chain-2 { top: 40%; right: -8%; animation-delay: 1.5s; }
-.chain-3 { bottom: 25%; left: -5%; animation-delay: 3s; }
-.chain-4 { top: 8%; right: 5%; animation-delay: 0.8s; }
-.chain-5 { bottom: 10%; right: -10%; animation-delay: 2.2s; }
+@keyframes float-orb {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.chain-1 { top: 15%; left: -10%; animation-delay: 0s; z-index: 1; filter: blur(1px); }
+.chain-2 { top: 45%; right: -8%; animation-delay: -1s; z-index: 20; }
+.chain-3 { bottom: 25%; left: -5%; animation-delay: -2s; z-index: 20; }
+.chain-4 { top: 8%; right: -5%; animation-delay: -3s; z-index: 1; filter: blur(2px); }
+.chain-5 { bottom: 10%; right: -12%; animation-delay: -4s; z-index: 1; }
+
+.chain-orb-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
 
 /* ── CHAINS MARQUEE ────────────────────────────────────────── */
 .chains-marquee {
