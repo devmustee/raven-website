@@ -1080,6 +1080,15 @@ img.mock-token-icon {
     line-height: 1.7;
     margin-bottom: 20px;
 }
+.bento-supporting-text {
+    font-size: 13px;
+    color: var(--primary);
+    line-height: 1.5;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    border-left: 2px solid var(--primary);
+    opacity: 0.8;
+}
 .bento-tags {
     display: flex;
     flex-wrap: wrap;
@@ -1163,6 +1172,87 @@ img.mock-token-icon {
 .bm-dot.eth { background: #627EEA; }
 .bm-dot.sol { background: #14F195; }
 .bm-dot.ton { background: #0098EA; }
+
+/* Payment mock */
+.payment-mock {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.p-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.p-bank {
+    font-size: 12px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+}
+.p-status {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--primary);
+    background: var(--primary-dim);
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+}
+.p-amount {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+.p-amount span {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-left: 4px;
+}
+.p-progress {
+    height: 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 100px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+}
+.p-fill {
+    height: 100%;
+    width: 40%;
+    background: var(--primary);
+    border-radius: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 15px var(--primary);
+    animation: p-loading 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
+}
+@keyframes p-loading {
+    0% { left: -40%; }
+    100% { left: 110%; }
+}
+.p-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.p-note::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #FF0055;
+    border-radius: 50%;
+}
 
 /* Token list mock */
 .bento-visual-sm {
@@ -1386,31 +1476,48 @@ img.mock-token-icon {
 }
 .chain-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+}
+.chains-supporting-text {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    opacity: 0.8;
 }
 .chain-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    padding: 28px 16px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    gap: 10px;
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
-    transition: var(--transition);
+    transition: var(--transition-fast);
     cursor: default;
+    backdrop-filter: blur(10px);
 }
 .chain-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    transform: translateY(-4px);
+    border-color: rgba(0, 245, 255, 0.3);
+    background: rgba(0, 245, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 .chain-card span {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    transition: var(--transition-fast);
+}
+.chain-card:hover span {
+    color: var(--text-primary);
 }
 .chain-icon {
     width: 48px;
@@ -2150,14 +2257,16 @@ img.mock-token-icon {
 
 /* Chain grid real logos */
 .chain-card-logo {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    object-fit: cover;
-    transition: var(--transition);
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: var(--transition-fast);
+    filter: grayscale(0.2) opacity(0.8);
 }
 .chain-card:hover .chain-card-logo {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    filter: grayscale(0) opacity(1);
 }
 
 /* Stellar logo needs inversion on dark backgrounds */
@@ -2701,4 +2810,52 @@ img.mock-token-icon {
 .ra-nav-item.active svg {
     filter: drop-shadow(0 0 4px rgba(0, 245, 255, 0.4));
 }
+
+/* ── GLOBAL COVERAGE SECTION ────────────────────────────── */
+.global-section {
+    padding: 120px 0;
+    background: radial-gradient(circle at bottom right, rgba(0, 245, 255, 0.05) 0%, transparent 50%);
+}
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+}
+.country-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-fast);
+}
+.country-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+}
+.country-flag {
+    font-size: 24px;
+    line-height: 1;
+}
+.country-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.country-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.country-currency {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
 
